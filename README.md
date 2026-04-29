@@ -1,16 +1,21 @@
 <!--
   Sam Tukra · github.com/SamPlvs
-  Profile image is a render of index.html (served at samplvs.github.io/SamPlvs)
-  in dark + light prefers-color-scheme variants. The <a> wraps the inner <img>
-  (not the whole <picture>) — GitHub's sanitizer otherwise hoists the <img>
-  out of <picture> and replaces our link with its auto-zoom-to-PNG link.
+  Profile image renders index.html (served at samplvs.github.io/SamPlvs)
+  in dark + light variants.
+
+  We can't use <picture> here because (a) wrapping <picture> in <a> makes
+  GitHub's sanitizer hoist the <img> out and replace our link with an
+  auto-zoom link to the raw PNG, and (b) putting <a> inside <picture>
+  around the <img> breaks <picture>'s source-selection (the <img> must
+  be a direct child of <picture> for the spec to work). The fragment
+  approach below uses GitHub's CSS to hide the wrong image based on the
+  viewer's GitHub theme, while keeping a single clean <a> wrapping both.
 -->
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="assets/profile-light.png">
-  <a href="https://samplvs.github.io/SamPlvs/"><img src="assets/profile-light.png" alt="Sam Tukra — Researcher · Programmer · Entrepreneur · Chief AI Officer at Applied Computing" width="100%"></a>
-</picture>
+<a href="https://samplvs.github.io/SamPlvs/">
+  <img src="assets/profile-dark.png#gh-dark-mode-only" alt="Sam Tukra — Researcher · Programmer · Entrepreneur · Chief AI Officer at Applied Computing" width="100%">
+  <img src="assets/profile-light.png#gh-light-mode-only" alt="Sam Tukra — Researcher · Programmer · Entrepreneur · Chief AI Officer at Applied Computing" width="100%">
+</a>
 
 ---
 

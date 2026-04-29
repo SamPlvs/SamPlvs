@@ -1,41 +1,25 @@
 <!--
   Sam Tukra · github.com/SamPlvs
-  Full editorial profile: https://samplvs.github.io/SamPlvs/
+  Profile image is a render of index.html (served at samplvs.github.io/SamPlvs)
+  in dark + light prefers-color-scheme variants. GitHub picks the right one
+  for the viewer's theme via the <picture> element below.
 -->
 
 <a href="https://samplvs.github.io/SamPlvs/">
-  <img src="assets/lofi-coder.png" alt="Sam Tukra — open the full editorial profile" width="100%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="assets/profile-light.png">
+    <img src="assets/profile-light.png" alt="Sam Tukra — Researcher · Programmer · Entrepreneur · Chief AI Officer at Applied Computing" width="100%">
+  </picture>
 </a>
-
-<h3 align="center">
-  <a href="https://samplvs.github.io/SamPlvs/">→ open the full profile ←</a>
-</h3>
-
-<p align="center">
-  <i>Researcher · Programmer · Entrepreneur</i><br>
-  Chief AI Officer &amp; Co-Founder @ <b>Applied Computing</b>
-</p>
 
 ---
 
-### Quick links
+### Connect
 
 - 🌐 [samtukra.com](https://samtukra.com/)
 - 🐦 [@SamTukra](https://twitter.com/SamTukra)
 - 💼 [LinkedIn](https://www.linkedin.com/in/samyakhtukra/)
 - 📚 [Google Scholar](https://scholar.google.com/citations?user=Mkxk50oAAAAJ)
 
-### Currently
-
-Building **Orbital** at Applied Computing — a physics-grounded multi-agent co-pilot for refinery operations. Frontier ML, deployed in live industrial environments.
-
-### Selected publications
-
-- **Improving Visual Representation Learning through Perceptual Understanding** — CVPR 2023
-- **Generalizable Stereo Depth Estimation with Masked Image Modelling** — Healthcare Tech. Letters, 2024
-- **The SurgT MICCAI 2022 Challenge** — first standardised soft-tissue tracker benchmark
-- **Daydreamer — RL for Robotic Surgical Vision** — IEEE T-PAMI
-
----
-
-<sub>The full editorial design ↑ lives at <a href="https://samplvs.github.io/SamPlvs/"><code>samplvs.github.io/SamPlvs</code></a> — GitHub Pages renders HTML/CSS that markdown can't.</sub>
+<sub>↑ Click the image for the live interactive version at <a href="https://samplvs.github.io/SamPlvs/"><code>samplvs.github.io/SamPlvs</code></a>.</sub>
